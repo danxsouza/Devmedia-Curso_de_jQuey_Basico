@@ -1,0 +1,28 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aula 6 - Entendendo o jQuery</title>
+
+	<script  type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    
+    
+    <script type="text/javascript">
+	
+	 
+	 $(document).ready(function(){
+		 $('a').click(function(){
+			var valor =  $('#txtTest').css('background', 'red').val();
+			 alert(valor);
+			 
+			 });
+		 });
+    </script>
+</head>
+
+<body>
+	<a href="#">clique 1</a>
+    <input type="text" id="txtTest"/>
+    
+</body>
+</html>
