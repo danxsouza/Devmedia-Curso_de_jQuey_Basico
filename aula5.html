@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aula 3 - Alo Mundo jQuery</title>
+
+	<script  type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    
+    
+    <script type="text/javascript">
+	<!--window.onload = function(){
+	//document.getElementById('clique').onclick=helloWorld;		
+	//}
+	
+    	//function helloWorld(){
+	 		//alert('Hello World');
+     //}
+	 
+	 $(document).ready(function(){
+		 $('#div1 a.link, #div2 a.link').click(function(){
+			 alert('Hello World jQuery');
+			 
+			 });
+		 
+		 
+		 $('#div3').click(function(){
+		        $('a.link2').css({"color": "red"});
+				 //alert('Ola pova');
+		    });
+		 
+		 });
+		 
+    </script>
+
+</head>
+
+<body>
+
+	<div id="div1">
+		<a href="#" class="link">clique 1</a></br>
+        <a href="#" class="link">clique 2</a></br>
+        <a href="#">clique 3</a></br>
+        <span class="link">Span com link</span>
+    </div>
+   
+    <div id="div2">
+    	<a href="#" class="link">clique 4</a>
+    </div>
+    
+        <div id="div3">
+    		<a href="#" class="link2">clique 5</a>
+        </div>
+    
+</body>
+</html>
