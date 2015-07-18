@@ -1,0 +1,66 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aula 10 - Seletores de formulários</title>
+
+	<script  type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    
+    <style type="text/css">
+    	.border 
+		{
+			border: 3px solid blue;
+			padding: 5px;	
+		}
+    
+    
+    </style>
+    
+    <script type="text/javascript">
+	
+	 $(document).ready(function(){
+		 
+		 //$(":input").css('background-color', 'green');
+		 $(':button').addClass("border");
+		 $(':checkbox').addClass("border");s
+		 
+		 $(':checked').css('border-color', 'yellow');
+		 $('select').css('background-color', 'black'); 
+		 
+        });
+		 
+		 
+    </script>
+</head>
+
+<body>
+             <form>
+             Nome: <input type="text" /> </br></br>
+             Senha: <input type="password"/> </br></br>
+             
+             
+             Radio: <input type="radio" name="M" />Masc
+             		<input type="radio" name="F"/>Fem</br></br>
+             Buscar Arquivo: <input type="file" /> </br></br>
+             
+             Checkbox: <input type="checkbox" checked="checked"/> Azul
+             		   <input type="checkbox" /> Branco
+                       <input type="checkbox" /> Vermelho  </br> </br>
+                       
+              Botâo: <input type="button" value="Botão"/> </br> </br>
+              		 <input type="reset" value="Resetar"/> </br></br>
+                     <input type="submit" value="Botão Submeter"/>   </br></br>
+                     
+              Select: <select>
+              			<option>Brasil</option>
+                        <option selected="selected">Portugal</option>
+                        <option>Nigéria</option>
+              
+                       </select>  </br></br>
+                       
+               Área de Texto: <textarea></textarea>                
+             </form>
+
+		
+</body>
+</html>

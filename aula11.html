@@ -1,0 +1,39 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aula 11 - Hierarquia de seletores no jQuery</title>
+
+	<script  type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+
+    <script type="text/javascript">
+	
+	 $(document).ready(function(){
+		 $('#el1 ~ li').css('color', 'green');
+		 
+        });
+
+    </script>
+</head>
+
+<body>
+            
+ <ul id="lista">
+ 	<li id="el1">Elemento 1</li>
+ 	<li>Elemento 2</li>
+ 	<li>Elemento 3</li>
+
+        <ul>
+            <li>Subelemento 1</li>
+            <li>Subelemento 2</li>
+               
+               <ul>
+                    <li>Camada 3.1</li>
+                    <li>Camada 3.2</li>
+                    <li>Camada 3.3</li>
+               </ul>
+         </ul>
+ </ul>     
+		
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>13 - Manipulando conteúdo e atributos</title>
+
+		<script  type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    
+    <style type="text/css">
+    	.border 
+		{
+			border: 3px solid blue;
+			padding: 1px;	
+		}
+    
+    
+    </style>
+    
+    <script type="text/javascript">
+	
+	 $(document).ready(function(){
+		$(':button').click(function(){
+			
+	        //$('div').toggleClass('border');
+			var a = $('div').html();
+			alert (a);
+			
+			$('div').replaceWith('xxxxxxxxxxxxxxxxxxxxxxxxxxx');
+			
+			});		
+	    });
+    </script>
+</head>
+
+<body>
+             <div>
+           		Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto </br>
+                Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
+             
+             </div>
+             
+            <input type="button" value="Botão" />
+
+		
+</body>
+</html>

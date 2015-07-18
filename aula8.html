@@ -1,0 +1,103 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aula 8 - Selectors</title>
+
+	<script  type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    
+    <style type="text/css">
+    	.vazio {
+			width:300px;
+			height:30px;	
+			border: 1px solid gray;		
+		}
+		
+		.cheio {
+			border: 2px solid blue;	
+			text-decoration: underline;
+		}
+
+    </style>
+    
+    <script type="text/javascript">
+	
+	 $(document).ready(function(){
+		 $('div:contains("Curs")').css('color', 'red');
+		 $('tr:contains("Gabri")').css('background-color', 'red');
+		 $('td:empty').css('background-color', 'green');
+		 $('td:empty').addClass('vazio');
+		 
+		 $('td:parent').addClass('cheio');
+		 
+		 $('div:has("span")').css('background-color', 'blue');
+		 
+		 $('td:has("span")').css('background-color', 'orange');
+            
+        });
+		 
+		 
+    </script>
+</head>
+
+<body>
+		<div><span>O céu é azul</span></div>
+        <div>Curso Devmedia</div>
+        <div></div>
+
+
+	<table border="1" bordercolor="#E41215" cellpadding="8" cellspacing="5">
+    	<tr>
+        	<td>Nome</td>
+            <td>Idade</td>
+            <td>Endereco</td>
+        </tr>
+        
+        <tr>
+        	<td>Diogo</td>
+            <td>24</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+        	<td>Sandra</td>
+            <td>45</td>
+            <td>R test 2</td>
+        </tr>
+        
+        <tr>
+        	<td><span>Gabriel</span></td>
+            <td>34</td>
+            <td>R Gabriel</td>
+        </tr>
+        
+        <tr>
+        	<td>Sandra</td>
+            <td>45</td>
+            <td>R test 2</td>
+        </tr>
+        
+        <tr>
+        	<td>Gabriel</td>
+            <td>34</td>
+            <td>R Gabriel</td>
+        </tr>
+        
+        
+                <tr>
+        	<td>Sandra</td>
+            <td>45</td>
+            <td>R test 2</td>
+        </tr>
+        
+        <tr>
+        	<td>Gabriel</td>
+            <td>34</td>
+            <td>R Gabriel</td>
+        </tr>
+
+
+    </table>
+    
+</body>
+</html>
