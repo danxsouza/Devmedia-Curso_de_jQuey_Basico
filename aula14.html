@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>14 - DOM Inserindo elementos</title>
+
+		<script  type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    
+    <style type="text/css">
+    	.border 
+		{
+			border: 3px solid blue;
+			padding: 1px;	
+		}
+    
+    
+    </style>
+    
+    <script type="text/javascript">
+	
+	 $(document).ready(function(){
+		$(':button').click(function(){
+			$('#div1').append($('span'));
+			
+			 var img = $('<img/>', 
+			 {src: 'img/12.jpg',
+			 border: 1, 
+			 mouseouver: function() 
+			 {alert('HAHAHAHAHAHAHAHAHAHHAHAHAHAHAHAH')}
+			 });
+			
+			$('div').append(img);
+	       	
+			
+			});		
+	    });
+    </script>
+</head>
+
+<body>
+            <span>Jorge Miranda</span>
+             <div id="div1" class="border">
+           			<p id="paragrafo1">Teste</p>
+             
+             </div>
+             
+            <input type="button" value="Botão" />
+
+		
+</body>
+</html>
