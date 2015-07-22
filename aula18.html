@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>18 - Eventos de Mouse com jQuery</title>
+
+		<script  type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    
+    <style type="text/css">
+    	.paragrafo 
+		{
+			border: 2px solid blue;
+			width: 250px;	
+			height:150px;
+			text-align:center;
+			font-size:12pt;
+		}
+
+    </style>
+    
+    <script type="text/javascript">
+	
+	 $(document).ready(function(){
+		$('#paragrafo2').click(function(){
+			$('#paragrafo1').text('clique do Event');
+
+			}).dblclick(function(){
+				$('#paragrafo1').text('Double Click do Mouse');
+			}).mousedown(function(){
+				$('#paragrafo1').text('Mouse Down Event');
+				
+				});
+	    });
+    </script>
+</head>
+
+<body>
+            <span>Jorge Miranda</span>
+            
+             <div id="div1" class="border">
+           			<p id="paragrafo1" class="paragrafo">
+                    		 Passe o mouseno paragrafo 1
+                    </p>
+                    
+                    <p id="paragrafo2" class="paragrafo">
+                    		  Passe o mouse no paragrafo 2
+                    </p>
+             
+             </div>
+             
+            <input type="button" value="Botão" />
+
+		
+</body>
+</html>
