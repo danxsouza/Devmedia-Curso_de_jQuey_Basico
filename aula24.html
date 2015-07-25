@@ -1,0 +1,99 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>24 - Efeitos Slide e Fade</title>
+
+<script  type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    
+    <style type="text/css">
+    	.sans 
+		{
+			border: 2px solid blue;
+			width: 250px;	
+			height:30px;
+			text-align:center;
+			font-size:13pt;
+		}
+
+    </style>
+    
+    <script type="text/javascript">
+	
+	 $(document).ready(function(){
+		 
+		 $('#div1').click(function(e){
+			$('#paragrafo1').slideUp('fast', function(){
+				alert('Slide Up Terminou');			 
+			 
+			 });
+	       });
+			 
+		$('#fade1').click(function(e){
+		   $('#paragrafo1').fadeIn();
+			
+		    	  });
+
+			 
+		$('#div2').click(function(e){
+			$('#paragrafo1').slideDown('slow', function(){
+				
+				alert('Slide Down Finish!!!');
+				});
+						
+			});	
+			
+			$('#fade2').click(function(e){
+		   $('#paragrafo2').fadeOut();
+			
+		    	  });
+			
+			
+		$('#div3').click(function(e){	
+			$('#paragrafo2').toggle();
+			  });
+		
+		$('#fadetoggle').click(function(e){	
+			$('#paragrafo2').fadeToggle();
+			  });
+		
+		$('#fadeto').click(function(e){
+			$('#paragrafo2').fadeTo('3000', 0.3);
+			
+			
+			});	  	    
+	
+       });
+
+	 
+	 
+    </script>
+</head>
+
+<body>
+   
+   		<div id="div1" class="sans">Slide UP</div>
+         <div id="fade1" class="sans">Fade In</div> </br>
+        
+        <p id="paragrafo1" class="paragrafo">
+        Texto Texto Texto Texto Texto
+        </p>
+        
+         <div id="div2" class="sans">Slide Down</div> </br>
+         
+         </br>
+        
+        <div id="div3" class="sans">Toggle</div>
+         <div id="fade2" class="sans">Fade Out</div>
+         <div id="fadetoggle" class="sans">Fade Toggle</div>
+         <div id="fadeto" class="sans">Fade To</div>
+        
+         <p id="paragrafo2" class="paragrafo">
+        Texto Texto Texto Texto Texto 
+        </p>
+
+               
+   </div>
+             
+</body>
+</html>

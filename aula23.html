@@ -1,0 +1,74 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>23 - Efeitos Básicos</title>
+
+<script  type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    
+    <style type="text/css">
+    	.sans 
+		{
+			border: 2px solid blue;
+			width: 250px;	
+			height:30px;
+			text-align:center;
+			font-size:13pt;
+		}
+
+    </style>
+    
+    <script type="text/javascript">
+	
+	 $(document).ready(function(){
+		 
+		 $('#sanf1').click(function(){
+			$('#paragrafo1').show();			 
+			 
+			 });
+			 
+		$('#sanf2').click(function(){
+			$('#paragrafo1').hide();
+						
+			});	
+		$('#sanf3').click(function(){
+			
+			$('#paragrafo2').toggle(5000, function(){
+					alert("Toogle Terminou");
+					$('#sanf2').trigger('click');
+				
+				});
+				
+			});		
+
+		 
+	    });
+    </script>
+</head>
+
+<body>
+            
+            
+   <div id="div1" class="border">
+   
+   		<div id="sanf1" class="sans">Show</div>
+        
+        <p id="paragrafo1" class="paragrafo">
+        Texto Texto Texto Texto Texto
+        </p>
+        
+         <div id="sanf2" class="sans">Hide</div>
+         
+         </br></br>
+        
+        <div id="sanf3" class="sans">Toggle</div>
+        
+         <p id="paragrafo2" class="paragrafo">
+        Texto Texto Texto Texto Texto 
+        </p>
+
+               
+   </div>
+             
+</body>
+</html>
