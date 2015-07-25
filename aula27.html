@@ -1,0 +1,127 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>27 - Efeito hover nas colunas das tabelas </title>
+
+<script  type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    
+    <style type="text/css">
+    	body
+		{
+			font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+			font-size:11pt;
+		}
+		
+		.par  {
+		
+			background-color: gray;
+		}
+		
+		.impar {
+		
+			background-color: orange;	
+		}
+		.thead {
+			
+			background-color:black;
+			color:white;
+		}
+		.hover {
+			font-weight:bold;
+			background-color: white;
+			color:black;	
+			
+		}
+    </style>
+    
+    <script type="text/javascript">
+	
+	 $(document).ready(function(){
+		 $('tbody tr:odd').addClass('impar');
+		 $('tbody tr:even').addClass('par');
+		 $('thead tr:nth-child(1)').addClass('thead'); 
+		 $('tfoot').addClass('thead');
+		 
+		 
+		 $('table thead tr th').prepend('+').css('cursor', 'pointer');
+	
+		 $('table thead tr th').each(function(i){
+			 $(this).click(function(){
+				 $('table td').removeClass('hover');
+				 $(this).parents('thead')
+				 .siblings('tbody')
+				 .children('tr')
+				 .each(function(){
+				  $(this).children('td:eq( '+ i + ' )')
+				  .addClass('hover');
+					 
+					 });
+				 });
+			 
+			 });
+		
+	 });
+       
+    </script>
+</head>
+
+<body>
+   
+   <table border="1px" cellpadding="6" cellspacing="1px" width="500px">
+   <caption>Tabela de Nome e Endereços</caption>
+   <thead>
+   	<tr>
+   		<th>Nome</th>
+   		<th>Endereco</th>
+   		<th>Telefone</th>
+   	</tr>
+    </thead>
+    
+    <tbody>
+    <tr>
+   		<td>Jose Luiz</td>
+   		<td>Rua Venezuela</td>
+   		<td>3332-55-80</td>
+   	</tr>
+    
+    <tr>
+   		<td>Maria do Carmo</td>
+   		<td>Rua 20</td>
+   		<td>6568-5896</td>
+   	</tr>
+    
+    <tr>
+   		<td>Ricardo Benedito</td>
+   		<td>Avenida Brasil</td>
+   		<td>5596-8974</td>
+   	</tr>
+    <tr>
+   		<td>Lucia de Souza</td>
+   		<td>Rua Augusta</td>
+   		<td>8959-8596</td>
+   	</tr>
+    <tr>
+   		<td>Mauro Mendonça</td>
+   		<td>Av: 15 de Novembro</td>
+   		<td>8959-3695</td>
+   	</tr>
+    <tr>
+   		<td>Marcia Vislaski</td>
+   		<td>Avenida 18 de Fevereiro</td>
+   		<td>8947-5863</td>
+   	</tr>
+    
+    </tbody>
+    
+    <tfoot>
+    		<tr>
+    		<td>Tabela contendo os Nomes</td>
+ 			</tr>   
+    </tfoot>
+   </table>
+ 
+   </div>
+             
+</body>
+</html>
