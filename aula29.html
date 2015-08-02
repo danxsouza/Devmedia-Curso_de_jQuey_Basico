@@ -1,12 +1,16 @@
-﻿<!doctype html>
+<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>27 - Efeito hover nas colunas das tabelas </title>
+<title>29 - Exibir e esconder linhas das tabelas </title>
 
 <script  type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
     
     <style type="text/css">
+	
+		.text_alinhado {
+			text-align:center;
+			}
     	body
 		{
 			font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
@@ -20,7 +24,7 @@
 		
 		.impar {
 		
-			background-color: orange;	
+			background-color: yellow;	
 		}
 		.thead {
 			
@@ -32,6 +36,22 @@
 			background-color: white;
 			color:black;	
 		}
+		.tooltip {
+			width: auto;
+			font-size: 14px;
+			text-align: center;
+			color: rgb(113, 157, 171);
+			background: rgb(255, 255, 255);
+			border: 4px solid rgb(255, 255, 255);
+			border-radius: 5px;
+			float: right;
+		}
+		
+		.divisor {
+			background-color: orange;
+			cursor: pointer;
+			
+		}
     </style>
     
     <script type="text/javascript">
@@ -40,24 +60,15 @@
 		 $('tbody tr:odd').addClass('impar');
 		 $('tbody tr:even').addClass('par');
 		 $('thead tr:nth-child(1)').addClass('thead'); 
-		 $('tfoot').addClass('thead');s
+		 $('tfoot').addClass('thead');
 		 
-		 $('table thead tr th').prepend('+').css('cursor', 'pointer');
-	
-		 $('table thead tr th').each(function(i){
-			 $(this).click(function(){
-				 $('table td').removeClass('hover');
-				 $(this).parents('thead')
-				 .siblings('tbody')
-				 .children('tr')
-				 .each(function(){
-				  $(this).children('td:eq( '+ i + ' )')
-				  .addClass('hover');
-					 
-					 });
-				 });
-			 
-			 });
+		 
+         //$('.divisor').prepend('<img src="img/12.jpg"/>'):
+
+        
+        
+		 
+		 
 	 });
        
     </script>
@@ -76,16 +87,21 @@
     </thead>
     
     <tbody>
+    
+    <tr>
+    	<td colspan="3" class="divisor text_alinhado">Nomes das Pessoas</td>
+    </tr>
+    
     <tr>
    		<td>Jose Luiz</td>
    		<td>Rua Venezuela</td>
    		<td>3332-55-80</td>
    	</tr>
     
-    <tr>
-   		<td>Maria do Carmo</td>
-   		<td>Rua 20</td>
-   		<td>6568-5896</td>
+      <tr>
+   		<td>Jose Luiz</td>
+   		<td>Rua Venezuela</td>
+   		<td>3332-55-80</td>
    	</tr>
     
     <tr>
@@ -93,6 +109,11 @@
    		<td>Avenida Brasil</td>
    		<td>5596-8974</td>
    	</tr>
+    
+      <tr>
+    	<td colspan="3" class="divisor text_alinhado"> Nomes das Pessoas 2 </td>
+    </tr>
+    
     <tr>
    		<td>Lucia de Souza</td>
    		<td>Rua Augusta</td>
@@ -113,7 +134,7 @@
     
     <tfoot>
     		<tr>
-    		<td>Tabela contendo os Nomes</td>
+    		<td colspan="3" class="text_alinhado">Tabela contendo os Nomes</td>
  			</tr>   
     </tfoot>
    </table>

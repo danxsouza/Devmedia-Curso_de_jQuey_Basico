@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>32 - Contagem de caracteres </title>
+
+    <script  type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+		
+	$('textarea').bind('input keyup paste', function(){
+    var cont = $(this).val().length;
+        
+        var limite = 50;
+        var disp = limite - cont;
+        
+        if (disp < 0 ) {
+            $('h5').text('Limite máximo atingido!');
+            
+            var temp = $(this).val().substr(0, limite);
+            $(this).val(temp);
+            disp = 0;
+        } else {
+            $('h5').text('');
+        }
+        
+        $('#cont').text(disp);
+
+    });	
+			
+		
+});	
+	
+   
+    </script>
+ 
+</head>
+
+<body>
+   <form>
+   <h2>Meu Devmedia</h2>
+   <h4>Digite no máximo 50 chars</h4>
+   <h5></h5>
+   
+   
+   <input type="checkbox" name="todos" id="todos"/> Todos
+   
+                <table cellpadding="4">
+                   <tr>
+                        <td>
+                             <textarea cols="20" rows="5"></textarea>
+                             Total de chars:  <span id="cont"></span>
+                        </td>
+	
+                        
+                   </tr>
+                        
+                  </table>
+   
+   </form>
+  
+</body>
+</html>

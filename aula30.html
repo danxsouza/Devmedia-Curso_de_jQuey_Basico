@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>30 - Aplicando efeito de dica de formulário </title>
+
+<script  type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+		
+		$('span').css({
+			'display': 'none',
+			'border':'1px solid gray',
+			'padding': '5px',
+			'background-color': 'orange'
+		});
+		
+		$(':input').focus(function() {
+    		$(this).next().fadeIn(1000);
+			$(this).css('border', '1px solid blue');
+	   });
+	   
+	   $(':input').blur(function(){		   
+		   $(this).next().fadeOut(2000);
+		   $(this).css('border', '1px solid red');   
+		   })
+    });
+   
+    </script>
+ 
+</head>
+
+<body>
+   <form>
+                <table cellpadding="4">
+                    <tr>
+                        <td>Usuário</td>
+                            <td>
+                                    <input type="text" name="user"/>
+                                    <span>Usuário Obrigatória</span>
+                            </td> 
+                            </tr>
+                        
+                        <tr>
+                        <td>Senha</td>
+                                <td>
+                                <input type="password" name="pass">
+                                <span>Senha Obrigatória</span>
+                                </td>
+                        </tr>
+                </table>
+   
+   </form>
+  
+</body>
+</html>

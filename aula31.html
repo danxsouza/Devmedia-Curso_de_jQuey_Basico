@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>31 - Selecionando campos do tipo checkbox </title>
+
+    <script  type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+		
+		$('body').css({
+			'font-family' : 'Segoe UI'
+		});
+		
+		$('table').css({
+			'border' : '1px solid gray',
+			'width' : '80%'
+			
+		    });
+		$('#select').click(function(){
+			$(':input[name=email]').attr('checked', 'checked');
+			
+			});	
+				
+		$('#unselect').click(function() {
+			$(':input[type=checkbox]').removeAttr('checked');	
+
+	    	});
+			
+		$('#todos').change(function(){
+			if (this.checked) {
+				$(':input[name=email]').attr('checked', 'checked');				
+				} else {
+					$(':input[name=email]').removeAttr('checked');						
+				}
+
+			});
+			
+		
+		});	
+	
+   
+    </script>
+ 
+</head>
+
+<body>
+   <form>
+   <h2>Meu Devmedia</h2>
+   <input type="button" value="Selecionar Todos" id="select"/>
+   <input type="button" value="Deslecionar Todos" id="unselect"/>
+   <br>
+   <br>
+   
+   <input type="checkbox" name="todos" id="todos"/> Todos
+   
+                <table cellpadding="4">
+                    <tr>
+                        <td>
+                        	<input type="checkbox" name="email" />
+                        </td>
+                            <td>
+                                <span>Fatura online banco do Brasil</span>
+                            </td> 
+                      </tr>
+                        
+                        <tr>
+                        
+                        <td>
+                          <input type="checkbox" name="email"  />
+                        </td>
+                                <td>
+                                   <span>Sua senha foi resetada  - Onix.com</span>
+                                </td>
+                        </tr>
+                        
+                         <tr>
+                        
+                        <td>
+                          <input type="checkbox" name="email" />
+                        </td>
+                                <td>
+                                   <span>Sua senha foi resetada  - Onix.com</span>
+                                </td>
+                        </tr>
+                        
+                         <tr>
+                        
+                        <td>
+                          <input type="checkbox" name="email" />
+                        </td>
+                                <td>
+                                   <span>Sua senha foi resetada  - Onix.com</span>
+                                </td>
+                        </tr>
+                        
+                         <tr>
+                        
+                        <td>
+                          <input type="checkbox" name="email" />
+                        </td>
+                                <td>
+                                   <span>Sua senha foi resetada  - Onix.com</span>
+                                </td>
+                        </tr>
+                        
+                  </table>
+   
+   </form>
+  
+</body>
+</html>
