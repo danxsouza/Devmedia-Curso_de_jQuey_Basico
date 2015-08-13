@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>34 - Acessando Iframe </title>
+
+    <script  type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+    
+        $(':button').click(function(){
+            var val = $('#iFrameTeste').contents().find('#inputIn').val();
+            alert(val);
+        
+        
+        });
+       
+});	
+	
+   
+    </script>
+ 
+</head>
+
+<body>
+   <form>
+   <h2>Acessando Iframes</h2>
+       <input type="text" id="inputOut" />
+       <input type="button" value="HTML" /> </br> </br>
+        <iframe name="iFrameTeste" src="aula34_Iframe.html" width="100%" height="400px" id="iFrameTeste"></iframe>   
+      
+
+   </form>
+  
+</body>
+</html>

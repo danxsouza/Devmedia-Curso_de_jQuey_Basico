@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>32 - Contagem de caracteres </title>
+
+    <script  type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+    
+        $('body').css({
+            'font-family' : 'Segoe UI',
+            'padding' : '20px'
+        
+        });
+        $('table').css({
+            'border' : '1px solid gray',
+            'width' : '80%'
+        });
+        
+        $(':input[type=text]').keydown(function(e){
+            var key = e.which;
+            var isNumero = (key >= 48 && key <= 57);
+            var isoutrasTeclas = ($.inArray(key, [8, 37,38,39,40,46]) != - 1);
+            
+            if (isNumero || isoutrasTeclas) {
+                return true;
+            } else {
+                return false;
+            }
+            
+                
+        
+});	
+	
+   });	
+    </script>
+ 
+</head>
+
+<body>
+   <form>
+   <h2>Restringindo valores não númericos</h2>
+   <h4>Digite somente valores númericos</h4>
+   
+      
+                <table cellpadding="4">
+                   <tr>
+                        <td>
+                            <input type="text"/>
+                        </td>
+	
+                        
+                   </tr>
+                        
+                  </table>
+   
+   </form>
+  
+</body>
+</html>

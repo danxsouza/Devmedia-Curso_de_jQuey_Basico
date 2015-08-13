@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>34 - Iframe </title>
+
+    <script  type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+        $(':button').click(function(){
+            var val = $('#inputOut', parent.document).val();
+            alert(val);
+        
+        });
+		
+});	
+	
+   
+    </script>
+ 
+</head>
+
+<body>
+   <form>
+   <h2>Iframe</h2>
+       
+       <table>
+            <tr>
+                <td>
+                    <input type="text"  id="inputIn" />
+                </td>
+
+           </tr>
+        </table>
+        <input type="button" value="IFRAME" />
+       
+   
+   </form>
+  
+</body>
+</html>
